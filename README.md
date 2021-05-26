@@ -89,7 +89,7 @@ This will open your account wallet inside MyCrypto.
 
 3. Looks like we're filthy rich! This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
 
-![]
+![https://github.com/Samuel-Alexander/Block_Party/blob/main/Screenshots/crypto_rich.png]
 
 4. In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH:
 
