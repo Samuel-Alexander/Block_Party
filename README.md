@@ -7,45 +7,45 @@ A step by step guide to setting up blockchain testnet using local network. This 
 
 
 ## Necessary Installations:
-* Install MyCrypto https://download.mycrypto.com/ (macOS may need to adjust permissions to open apps from unidentified developers:  >> System Preferences >> Security & Privacy). For this tow work, you will need to generate 2 new wallets and store address and private key in a secure location. Use your preferred method of authentication (mneumonic, keystore, etc). **DO NOT SHARE YOUR PRIVATE KEY with anyone, under any circumstances.** We are creating a testnet in this example and creating tokens with no value, but this should always be the practice.
+* Install MyCrypto https://download.mycrypto.com/ (macOS may need to adjust permissions to open apps from unidentified developers:  >> System Preferences >> Security & Privacy). Note: DO NOT SHARE YOUR PRIVATE KEY with anyone, under any circumstances. We are creating a testnet in this example and creating tokens with no value, but this should always be the practice.
 * Install Go Ethereum Tools https://geth.ethereum.org/downloads/. Be sure to download the latest stable release bundle for your operating system. Decompress archive into local repo where you plan to run your nodes. For this example, we will be using a repo called 'Block_Party'.
 
 ## Creating a Genesis network
 Open terminal / git bash and navigate to newly created Block_Party repo. Proceed with the
 following commands:
 
-1. Initialize Puppeth blockchain service management tool:
-./puppeth 
-
-2. You will be prompted to specify a network name. In this example, we will use 'fiesta'
-
-3. In the prompt that follows, first select option '2' to configure a new genesis, then '1' to
-create a new genesis from scratch and then '2' to select 'Proof-of-Authority' consensus engine. DEFAULT options for how long block should take
-
-4. When prompted, paste both wallet addresses one at a time into the list of accounts to seal. (note: first 2 alphanumerics '0x' provided)
-
-5. Paste the wallet addresses again in the list of accounts to pre-fund. There are no block rewards in PoA, so you'll need to pre-fund. Choose 'no' when prompted to pre-fund with wei as it keeps genesis cleaner
-
-6. Specify network/chain ID as '42069'
-
-7. Complete the rest of the prompts, and when you are back at the main menu, choose the "Manage existing genesis" option. 
-
-8. Export genesis configurations. This will fail to create two of the files, but you only need party.json file. You can delete the party-harmony.json file from the repo.
-
-9. Use the control + c command on keyboard to exit from puppeth
-
-10. Create directory for 1st node within the Block_Party repo
+1. Create directory for 1st node within the Block_Party repo
 ./geth account new --datadir n1
 
 After entering this line of code, you will be prompted to provide a password. Once provided, 
 you will see a public address for the new key as well as the filepath to the secret key file in the terminal. Be sure to save all of this information as it will be needed later. 
 
-11. Create directory for 2nd node
+2. Create directory for 2nd node
 ./geth account new --datadir n2
 
+3. Initialize Puppeth blockchain service management tool:
+./puppeth 
+
+4. You will be prompted to specify a network name. In this example, we will use 'fiesta'
+
+5. In the prompt that follows, first select option '2' to configure a new genesis, then '1' to
+create a new genesis from scratch and then '2' to select 'Proof-of-Authority' consensus engine. DEFAULT options for how long block should take
+
+6. When prompted, paste both wallet addresses one at a time into the list of accounts to seal. (note: first 2 alphanumerics '0x' provided)
+
+7. Paste the wallet addresses again in the list of accounts to pre-fund. There are no block rewards in PoA, so you'll need to pre-fund. Choose 'no' when prompted to pre-fund with wei as it keeps genesis cleaner
+
+8. Specify network/chain ID as '42069'
+
+9. Complete the rest of the prompts, and when you are back at the main menu, choose the "Manage existing genesis" option. 
+
+10. Export genesis configurations. This will fail to create two of the files, but you only need party.json file. You can delete the party-harmony.json file from the repo.
+
+11. Use the control + c command on keyboard to exit from puppeth
+
 12. Initialize each node with the new party.json with geth.
-./geth --datadir n1 init party.json
-./geth --datadir n2 init party.json
+./geth --datadir n1 init fiesta.json
+./geth --datadir n2 init fiesta.json
 
 13. Run the first node, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
 ./geth --datadir node1 --unlock "SEALER_ONE_ADDRESS" --mine --rpc --allow-insecure-unlock
