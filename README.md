@@ -92,7 +92,7 @@ After connecting to the custom network in MyCrypto, it can be tested by sending 
 
 This will open your account wallet inside MyCrypto.
 
-3. Looks like we're filthy rich! This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
+3. Looks like we're filthy rich! Before you quit your day job, recall that this is the balance that was pre-funded for this account in the genesis configuration; these millions of ETH tokens are just for testing purposes. Back to the salt mines...
 
 <img width="1216" alt="crypto_rich" src="https://user-images.githubusercontent.com/75221323/119595352-0b30d280-bda3-11eb-9bac-99de0d8258bb.png">
 
