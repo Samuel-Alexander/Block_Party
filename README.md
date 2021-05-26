@@ -86,8 +86,6 @@ After connecting to the custom network in MyCrypto, it can be tested by sending 
 
 1. Select the View & Send option from the left menu pane, then click Keystore file.
 
-<img width="1216" alt="mycrypto_change_network" src="https://user-images.githubusercontent.com/75221323/119595425-2ac7fb00-bda3-11eb-9c20-8d639443220f.png">
-
 2. On the next screen, click Select Wallet File, then navigate to the keystore directory inside your Node1 directory, select the file located there, provide your password when prompted and then click Unlock.
 
 <img width="1217" alt="unlock_keystore_file" src="https://user-images.githubusercontent.com/75221323/119595551-577c1280-bda3-11eb-8987-2c89aa00c793.png">
@@ -121,9 +119,9 @@ You should see the transaction go from Pending to Successful in around the same 
 
 You can click the Check TX Status button to update the status
 
-![]
 
-Congratulations, you successfully created your own private blockchain!
+
+## Congratulations, you successfully created your own private blockchain!
 
 
 
