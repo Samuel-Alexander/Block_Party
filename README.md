@@ -7,7 +7,7 @@ A step by step guide to setting up blockchain testnet using local network. This 
 
 
 ## Necessary Installations:
-* Install MyCrypto https://download.mycrypto.com/ (macOS may need to adjust permissions to open apps from unidentified developers:  >> System Preferences >> Security & Privacy). For this tow work, you will need to generate 2 new wallets and store address and private key in a secure location. Use your preferred method of authentication (mneumonic, keystore, etc). **DO NOT SHARE YOUR PRIVATE KEY with anyone, under any circumstances.**
+* Install MyCrypto https://download.mycrypto.com/ (macOS may need to adjust permissions to open apps from unidentified developers:  >> System Preferences >> Security & Privacy). For this tow work, you will need to generate 2 new wallets and store address and private key in a secure location. Use your preferred method of authentication (mneumonic, keystore, etc). **DO NOT SHARE YOUR PRIVATE KEY with anyone, under any circumstances.** We are creating a testnet in this example and creating tokens with no value, but this should always be the practice.
 * Install Go Ethereum Tools https://geth.ethereum.org/downloads/. Be sure to download the latest stable release bundle for your operating system. Decompress archive into local repo where you plan to run your nodes. For this example, we will be using a repo called 'Block_Party'.
 
 ## Creating a Genesis network
@@ -61,7 +61,7 @@ Your private PoA blockchain should now be running!
 With both nodes up and running, the blockchain can be added to MyCrypto for testing.
 
 
-## Send Test Transaction
+## Connect wallet to node
 ### Use the MyCrypto GUI wallet to connect to the node with the exposed RPC port. 
 
 1. Open the MyCrypto app, then click Change Network at the bottom left:
@@ -74,13 +74,43 @@ With both nodes up and running, the blockchain can be added to MyCrypto for test
 
 ![]
 
-
-4. After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
-
+After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
 
 
-3. Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
+## Send Test Transaction
 
+1. Select the View & Send option from the left menu pane, then click Keystore file.
+
+![]
+
+2. On the next screen, click Select Wallet File, then navigate to the keystore directory inside your Node1 directory, select the file located there, provide your password when prompted and then click Unlock.
+
+This will open your account wallet inside MyCrypto.
+
+3. Looks like we're filthy rich! This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
+
+![]
+
+4. In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH:
+
+![]
+
+5. Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
+
+![]
+
+6. Click the Check TX Status when the green message pops up, confirm the logout:
+
+![]
+
+You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
+
+
+You can click the Check TX Status button to update the status
+
+![]
+
+Congratulations, you successfully created your own private blockchain!
 
 
 
