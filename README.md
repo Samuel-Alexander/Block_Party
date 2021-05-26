@@ -41,6 +41,12 @@ create a new genesis from scratch and then '2' to select 'Proof-of-Authority' co
 
 10. Export genesis configurations. This will fail to create two of the files, but you only need party.json file. You can delete the party-harmony.json file from the repo.
 
+Your code should look like this:
+
+<img width="644" alt="puppeth" src="https://user-images.githubusercontent.com/75221323/119595386-1a178500-bda3-11eb-9486-1984b062e47d.png">
+
+
+
 11. Use the control + c command on keyboard to exit from puppeth
 
 12. Initialize each node with the new party.json with geth.
@@ -66,13 +72,12 @@ With both nodes up and running, the blockchain can be added to MyCrypto for test
 
 1. Open the MyCrypto app, then click Change Network at the bottom left:
 
-![]
+<img width="1216" alt="mycrypto_change_network" src="https://user-images.githubusercontent.com/75221323/119595442-32879f80-bda3-11eb-870e-1e6248177c92.png">
+
 
 2. Click "Add Custom Node", then add the custom network information that you set in the genesis.
 
 3. Make sure that you scroll down to choose Custom in the "Network" column to reveal more options like Chain ID. You will need to select the custom network that was just created and input the chain ID '42069'. Use ETH as currency and local host network: http://127.0.0.1:8545 (This points to the default RPC port on your local machine). Once all fields have been addressed, click [Save & Use Custom Node]
-
-![]
 
 After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
 
@@ -81,29 +86,37 @@ After connecting to the custom network in MyCrypto, it can be tested by sending 
 
 1. Select the View & Send option from the left menu pane, then click Keystore file.
 
-![]
+<img width="1216" alt="mycrypto_change_network" src="https://user-images.githubusercontent.com/75221323/119595425-2ac7fb00-bda3-11eb-9c20-8d639443220f.png">
 
 2. On the next screen, click Select Wallet File, then navigate to the keystore directory inside your Node1 directory, select the file located there, provide your password when prompted and then click Unlock.
+
+<img width="1217" alt="unlock_keystore_file" src="https://user-images.githubusercontent.com/75221323/119595551-577c1280-bda3-11eb-8987-2c89aa00c793.png">
 
 This will open your account wallet inside MyCrypto.
 
 3. Looks like we're filthy rich! This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
 
-![https://github.com/Samuel-Alexander/Block_Party/blob/main/Screenshots/crypto_rich.png]
+<img width="1216" alt="crypto_rich" src="https://user-images.githubusercontent.com/75221323/119595352-0b30d280-bda3-11eb-9bac-99de0d8258bb.png">
+
 
 4. In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH:
 
-![]
+<img width="1211" alt="transaction" src="https://user-images.githubusercontent.com/75221323/119595481-40d5bb80-bda3-11eb-963e-78942d803cba.png">
+
 
 5. Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
 
-![]
+<img width="503" alt="confirm_transaction" src="https://user-images.githubusercontent.com/75221323/119595591-682c8880-bda3-11eb-995e-886aa31e5fb9.png">
+
 
 6. Click the Check TX Status when the green message pops up, confirm the logout:
 
-![]
+<img width="1218" alt="mycrypto_confirm" src="https://user-images.githubusercontent.com/75221323/119595677-87c3b100-bda3-11eb-8882-f1e8da49ebbe.png">
+
 
 You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
+
+<img width="1214" alt="trans_status_pending" src="https://user-images.githubusercontent.com/75221323/119595617-74184a80-bda3-11eb-886f-8b32b8581fc6.png">
 
 
 You can click the Check TX Status button to update the status
