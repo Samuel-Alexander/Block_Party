@@ -17,7 +17,7 @@ following commands:
 1. Initialize Puppeth blockchain service management tool:
 ./puppeth 
 
-2. You will be prompted to specify a network name. In this example, we will use 'party'
+2. You will be prompted to specify a network name. In this example, we will use 'fiesta'
 
 3. In the prompt that follows, first select option '2' to configure a new genesis, then '1' to
 create a new genesis from scratch and then '2' to select 'Proof-of-Authority' consensus engine. DEFAULT options for how long block should take
