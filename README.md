@@ -114,7 +114,7 @@ This will open your account wallet inside MyCrypto.
 
 You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
 
-<img width="1214" alt="trans_status_pending" src="https://user-images.githubusercontent.com/75221323/119595617-74184a80-bda3-11eb-886f-8b32b8581fc6.png">
+<img width="1213" alt="Screen Shot 2021-05-25 at 10 03 21 PM" src="https://user-images.githubusercontent.com/75221323/119596595-18e75780-bda5-11eb-9d34-4d3851cb270b.png">
 
 
 You can click the Check TX Status button to update the status
